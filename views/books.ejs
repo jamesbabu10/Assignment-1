@@ -1,0 +1,42 @@
+<%- include('./includes/head.ejs')%> 
+</head>
+<body>
+<%- include('./includes/nav.ejs')%>
+
+<div class="form">
+  <form class="product-form" action="/books" method="get">
+      <div class="form-control">
+        <label for="title">Search by Authors Email</label>
+        <input type="text" name="email" id="email" />
+        <button class="btn" type="submit">Search</button>
+      </div>
+  </form>
+  <form class="product-form" action="/books" method="get">
+      <div class="form-control">
+        <label for="title">Search by ISBN</label>
+        <input type="text" name="isbn" id="title" />
+        <button class="btn" type="submit">Search</button>
+      </div>
+  </form>
+  <% if(books.length>0) {%>
+    <br>
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>ISBN</th>
+      <th>Authors</th>
+      <th>Description</th>
+    </tr>
+    <% for(let book in books){%>
+    <tr>
+      <td><%=books[book].title%></td>
+      <td><%=books[book].isbn%></td>
+      <td><%=books[book].authors%></td>
+      <td><%=books[book].description%></td>
+    </tr>
+    <%}%> <%} else{%>
+  </table>
+  <h1>No Books found</h1>
+  <%}%>
+</div>
+<%- include('./includes/end.ejs')%>

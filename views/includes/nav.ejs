@@ -1,0 +1,33 @@
+<header class="main-header">
+  <nav class="main-header__nav">
+    <ul class="main-header__item-list">
+      <li class="main-header__item">
+        <a class="<%= path === '/Authors' ? 'active' : '' %>" href="/authors"
+          >Authors</a
+        >
+      </li>
+      <li class="main-header__item">
+        <a class="<%= path === '/Books' ? 'active' : '' %>" href="/books"
+          >Books</a
+        >
+      </li>
+      <li class="main-header__item">
+        <a
+          class="<%= path === '/magazines' ? 'active' : '' %>"
+          href="/magazines"
+          >Magazines</a
+        >
+      </li>
+      <li class="main-header__item">
+        <a class="<%= path === '/sorted' ? 'active' : '' %>" href="/sorted"
+          >Sorted Details
+        </a>
+      </li>
+      <li class="main-header__item">
+        <a class="<%= path === '/download' ? 'active' : '' %>" href="/download"
+          >Download
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
